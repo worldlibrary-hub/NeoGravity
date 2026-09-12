@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "NeoGravity verification suite: Computational checks for the Theory of NeoGravity & Ether Dynamics"
+version: "4.0"
+date-released: "2026-09-06"
+doi: 10.5281/zenodo.22087714
+authors:
+  - family-names: Guagliardo
+    given-names: John Salvatore
+    orcid: "https://orcid.org/0000-0003-0756-6886"
+license: "See README"
