@@ -1,104 +1,28 @@
 
-NeoGravity Verification Suite
-=============================
-Companion computational materials for
-"The Theory of NeoGravity & Ether Dynamics"
-John Salvatore Guagliardo, Independent Researcher
-ORCID: 0000-0003-0756-6886
-
-Version 4.0  --  6 September 2026.  Supersedes version 3.1 (3 September 2026).
-Every central mathematical claim in the series, reduced to executable code.
-
-Run:      python3 verify_neogravity.py
-Requires: sympy, numpy
-
-CONVENTIONS (v3.1, canonical)
------------------------------
-  Ether Plenum        the space-filling Lorentz-invariant medium
-  Radiative Undertow  the INWARD reaction load; identified with gravitation
-  Ether Density       rho_ether INCREASES toward a gravitating mass
-  Equation of state   w = 1/3, DERIVED from the traceless stress tensor
-                      of any massless field. Not fitted.
-  Optical exponent    n = (rho/rho_0)^k with k = 2/3.  THE ONE FITTED
-                      QUANTITY of the framework, numerically the PPN gamma.
-  Composite index     n(r) = exp(2 GM / r c^2)
-
-Each claim prints PASS / FAIL / NOTE. Where a result is CALIBRATED rather than
-DERIVED, the script says so explicitly. Nothing is asserted here without being
-computed.
-
-WHAT CHANGED FROM VERSION 2.0, AND WHY
---------------------------------------
-Version 2.0, the deposited release, contradicted the papers that cite it on four
-central points. It was frozen at an earlier generation of the framework and was
-never reissued. It is what a reviewer following the DOI from Papers 1-19 actually
-runs, and what they found was a program asserting, in capitals, that the
-accompanying paper's central epistemic claim was false. The four:
-
-  1. OPTICAL RELATION.  v2.0 used n = sqrt(rho/rho_0) throughout, in its header,
-     its code and its printed output. That form was retired at Chapter 9. The
-     relation is n = (rho/rho_0)^(2/3).
-
-  2. THE EQUATION OF STATE.  v2.0 reported "w = 1/4, CALIBRATED from light
-     deflection", and posed as an open problem "why 1/4 and not the 1/3 of an
-     isotropic photon gas?". That question has been answered: w = 1/3 is FORCED
-     by the tracelessness of the stress tensor of any massless field, and is
-     derived, not fitted. See Claim 3.
-
-  3. THE COUNT OF FITTED CONSTANTS.  v2.0 printed ">>> TWO fitted constants.
-     Not one. State this plainly. <<<" and "Any claim of 'a single calibrated
-     constant' is FALSE." The framework has ONE. R_eff is definitional, not a
-     second fit. See Claim 10.
-
-  4. COVERAGE.  Four verification scripts written in September 2026 were never
-     folded in, while the Standing block in every paper cited results they
-     compute. They are now Claims 6, 13 and 14.
-
-  The v2.0 route reached the correct refractive index by a different attribution:
-  it held the optical exponent at 1/2 and tuned w to 1/4 so that the deflection
-  came out. The current route derives w = 1/3 independently and fits the optical
-  exponent instead. Both give n = exp(2GM/rc^2). The difference is which quantity
-  is free -- and under v3.1 the equation of state no longer is.
-
-  ON THE VERSION NUMBER.  There has never been a version 3.0 or 3.1 of this
-  suite; the deposit has stood at 2.0 since it was archived. Nine of the
-  nineteen published papers nevertheless cite "Version 3.1" in their Standing
-  block, and the other eleven cite "Version 2.0". This release takes the
-  number nine papers already carry in print, so that those nine become correct
-  on deposit and the remaining eleven are the ones amended. The DOI is
-  unchanged by this release. The live identifier is
-  10.5281/zenodo.22087714; 10.5281/zenodo.22080221 is retired and must not be
-  cited (errata 37).
-
-WHAT CHANGED FROM VERSION 3.1 (6 September 2026)
-------------------------------------------------
-  Five claims added, each a statement the papers now make and each able to fail:
-  15  a potential body force sources the compression branch only (curl grad = 0);
-  16  the relaxational source rule, kappa_L = kappa_0/(omega tau_s)^2, as a MODEL
-      with its settling time bounded by the double pulsar;
-  17  the wave-sector energy is coupling-set field energy, not the medium's
-      inertia, recorded as a POSTULATE with the ratio computed;
-  18  the relaxation window's top is the Hubble time, and a galaxy lies below it
-      by about a hundred (elastic, no bulk dissipation);
-  19  the transverse source: the solenoidal force the medium needs at the double
-      pulsar, and the shortfall of P4 viscous entrainment (11 to 20 orders).
-  Wording: "has not earned" became "has not derived" (the series uses plain
-  language for standing: derived, calibrated, held, or to be derived).
-  Nothing that 3.1 checked was dropped; the claim list is a superset.
-
-
 ==========================================================================
 CLAIM 1 -- Hydrostatic equilibrium of the Ether Plenum
+--------------------------------------------------------------------------
+  Part III. The Law
+  Gravity as Hydrodynamics, Paper 11
+  Section 3. Deriving the Index  |  3.2 Hydrostatic Equilibrium
+  Recomputes: rho(r) = rho_0 exp(3GM/rc^2) from the inward load under hydrostatic equilibrium
+  The Plenum, and its constants  |  DERIVED
 ==========================================================================
 Undertow is inward (compressive):  w c^2 drho/dr = -rho GM/r^2
 Solution : Eq(rho(r), C1*exp(GM/(c**2*r*w)))
 Boundary : rho -> rho_0 as r -> oo : 1
 [PASS] rho(r) = rho_0 exp[+GM/(w c^2 r)]
-[NOTE] Ether Density INCREASES toward the mass. The medium is compressed,
+[NOTE] Ether Density INCREASES toward the mass. The Plenum is compressed,
 [NOTE] not rarefied. That is what an inward reaction load does.
 
 ==========================================================================
 CLAIM 2 -- The exponential is NOT a 1/r power law
+--------------------------------------------------------------------------
+  Part X. Evidence, Method and Record
+  Working Backward Through the Maze, Paper 15
+  Section 5. Step Three: Equilibrium Integrates the Force  |  5.3 The Integration
+  Recomputes: the exponent depends on 1/r; the 1/r potential appears only at first order
+  The Plenum, and its constants  |  DERIVED
 ==========================================================================
 rho(r)/rho_0 = exp(+A/r)
 Large-r expansion: 1 + A/r + A**2/(2*r**2) + O(r**(-3), (r, oo))
@@ -111,6 +35,12 @@ Large-r expansion: 1 + A/r + A**2/(2*r**2) + O(r**(-3), (r, oo))
 
 ==========================================================================
 CLAIM 3 -- Equation of state, w = 1/3.  DERIVED, NOT FITTED
+--------------------------------------------------------------------------
+  Part III. The Law
+  Gravity as Hydrodynamics, Paper 11
+  Section 3. Deriving the Index  |  3.3 The Equation of State Is Not Free
+  Recomputes: w = 1/3 from the tracelessness of a massless stress tensor
+  The Plenum, and its constants  |  DERIVED
 ==========================================================================
 Massless field  =>  traceless stress tensor:  T^mu_mu = -rho c^2 + 3P = 0
                 =>  P = c**2*rho/3
@@ -126,6 +56,12 @@ Substituting w = 1/3 into Claim 1:
 
 ==========================================================================
 CLAIM 4 -- Ambient density rho_0 from the CMB.  DERIVED
+--------------------------------------------------------------------------
+  Part II. The Plenum
+  Reclaiming the Ether Plenum, Paper 9
+  Section 3. The Calculation  |  3.2 Mass Equivalence
+  Recomputes: rho_0 = a T_CMB^4 / c^2, the measured ambient mass-equivalent density
+  The Plenum, and its constants  |  DERIVED
 ==========================================================================
 Radiation constant a = 4 sigma / c   = 7.56573e-16 J m^-3 K^-4
 CMB temperature      T               = 2.7255 K   (Fixsen 2009)
@@ -137,6 +73,12 @@ Mass density         rho_0 = u / c^2 = 4.64509e-31 kg m^-3
 
 ==========================================================================
 CLAIM 5 -- Optical exponent k = 2/3.  THE ONE FITTED CONSTANT
+--------------------------------------------------------------------------
+  Part III. The Law
+  Gravity as Hydrodynamics, Paper 11
+  Section 3. Deriving the Index  |  3.4 The Optical Relation and the Single Constrained Ratio
+  Recomputes: k = 2/3 from 3k = 2; the one fitted quantity, numerically the PPN gamma
+  The Plenum, and its constants  |  FITTED
 ==========================================================================
 n(r) = (rho/rho_0)^k = exp[ 3 k GM / (r c^2) ]
 First-order coefficient in m = GM/c^2 : 3*k/r
@@ -155,6 +97,12 @@ Deflection   4x             = 1.7512 arcsec
 
 ==========================================================================
 CLAIM 6 -- Second-order divergence from GR.  THE FALSIFIABLE PREDICTION
+--------------------------------------------------------------------------
+  Part X. Evidence, Method and Record
+  Working Backward Through the Maze, Paper 15
+  Section 8. The Falsifiable Prediction
+  Recomputes: the second-order deflection difference at the solar limb, 0.73 microarcsec
+  The solar system  |  PREDICTED
 ==========================================================================
 n_ether(r) = exp(2u)                 ->  a2 = 2
 n_GR(r)    = (1+u/2)^3 / (1-u/2)     ->  a2 = 7/4
@@ -170,6 +118,12 @@ DELTA_theta = pi * DELTA_a2 * x^2 = 0.7298 microarcseconds
 
 ==========================================================================
 CLAIM 7 -- Mercury perihelion, independent of the calibration
+--------------------------------------------------------------------------
+  Part VI. The Strong Field
+  A Classical Hydrodynamic Paradigm, Paper 13
+  Section 5. Perihelion Advance
+  Recomputes: Mercury's perihelion advance, 42.98 arcsec per century, with no calibration used
+  The solar system  |  DERIVED
 ==========================================================================
 Delta_phi = 24 pi^3 a^2 / [ T^2 c^2 (1 - e^2) ]  per orbit
 per orbit   = 5.0187e-07 rad
@@ -179,14 +133,44 @@ per century = 42.98 arcsec
 
 ==========================================================================
 CLAIM 8 -- Gravitational redshift and Shapiro delay
+--------------------------------------------------------------------------
+  Part VI. The Strong Field
+  A Classical Hydrodynamic Paradigm, Paper 13
+  Section 4. Light Deflection and Shapiro Delay
+  Recomputes: the solar gravitational redshift and the Shapiro delay at superior conjunction
+  The solar system  |  DERIVED
 ==========================================================================
-Solar surface redshift z = GM/(Rc^2) = 2.1225e-06
-[PASS] z = 2.123e-06, measured 2.12e-6
+REDSHIFT, over the tower the measurement was actually made on:
+     z = g h / c^2 = 9.80665 * 22.5 / c^2 = 2.4551e-15
+[PASS] z = 2.455e-15 reproduces the corpus's 2.459e-15
+[NOTE] Measured 2.57 +/- 0.26 e-15 (Pound and Rebka, 1960): the computed
+[NOTE] value sits inside the measurement's own error bar.
+
+     for reference, at the solar surface z = GM/(Rc^2) = 2.1225e-06
+[NOTE] That solar figure is COMPUTED here and is not quoted by any paper.
+[NOTE] Version 4.0 checked it against a 'measured' value the corpus does
+[NOTE] not state. The check is withdrawn; the number is kept as context.
+
+SHAPIRO DELAY, the same parameter probed at a different geometry:
+     Dt = (4GM/c^3) ln( 4 r1 r2 / b^2 )
+     r1 = 1 AU, r2 = 0.72333 AU (Venus), b = R_sun
+     Dt = 232.6 microseconds
+[PASS] 232.6 us reproduces the corpus's 232.6 us
+[NOTE] Measured as a ratio of observed to predicted delay, 1.015 +/- 0.05.
+[NOTE] The deflection CALIBRATES the optical exponent; the Shapiro delay
+[NOTE] probes the same parameter at a different geometry, so it is a
+[NOTE] consistency check and not an independent prediction. Paper 13 says so.
 [NOTE] The redshift is a temporal input to the calibration, not an
 [NOTE] independent confirmation of it. Stated as such in Paper 13.
 
 ==========================================================================
 CLAIM 9 -- Photon-capture diameter.  A NEAR-TERM DISCRIMINATOR
+--------------------------------------------------------------------------
+  Part VI. The Strong Field
+  The Dark Circle Around a Black Hole, Paper 30
+  Section 2. The Derivation, Whole
+  Recomputes: the photon-capture diameter, 4.63 percent above the Schwarzschild shadow
+  The strong field  |  PREDICTED
 ==========================================================================
 framework  b_c = 2e   GM/c^2 = 5.436564 GM/c^2
 GR         b_c = 3sqrt3 GM/c^2 = 5.196152 GM/c^2
@@ -196,13 +180,19 @@ excess                          = 4.63 %
 
 ==========================================================================
 CLAIM 10 -- Frame dragging: TOPOLOGY, and R_eff is DEFINITIONAL
+--------------------------------------------------------------------------
+  Part V. Dynamics
+  How Spinning Masses Stir the Ether Plenum, Paper 26
+  Section 3. The Amplitude, and the Dissolution of the Fitted Length
+  Recomputes: R_eff by Omega R_eff^3 = 2GJ/c^2; a definition, not a second fitted constant
+  The solar system  |  DEFINITIONAL
 ==========================================================================
 Stokes rotating sphere : v = Omega R^3 sin(th) / r^2
 GR Lense-Thirring drag : v = 2 G J sin(th) / (c^2 r^2)
 [PASS] identical DIPOLE TOPOLOGY: both go as sin(theta)/r^2
 [WRONG] the two are NOT 'algebraically identical' physical fields.
 [NOTE] Stokes flow requires viscosity and a no-slip boundary at r=R.
-[NOTE] Kerr is a VACUUM solution (T_munu = 0). The mechanisms differ.
+[NOTE] Kerr is a VACUUM solution (T_munu = 0). The two accounts differ.
 
 Earth: I = 0.3307 M R^2  ->  J = 5.8457e+33 kg m^2 / s
        R_eff = 4919.6 m = 4.92 km
@@ -219,6 +209,12 @@ Earth: I = 0.3307 M R^2  ->  J = 5.8457e+33 kg m^2 / s
 
 ==========================================================================
 CLAIM 11 -- The coupling tracks mass-energy, not thermal output
+--------------------------------------------------------------------------
+  Part III. The Law
+  The NeoGravity Theorem, Paper 3
+  Section 5. Two Quantitative Constraints  |  5.2 The Coupling Cannot Track Thermal Luminosity
+  Recomputes: the coupling tracks mass-energy and not thermal luminosity
+  The solar system  |  DERIVED
 ==========================================================================
 Sun   L/M                    = 1.9247e-04 W/kg
 Earth L/M, internal heat     = 7.8698e-12 W/kg  -> ratio 2.446e+07
@@ -238,6 +234,12 @@ Sun on Earth, gravitational pull vs solar radiation pressure:
 
 ==========================================================================
 CLAIM 12 -- Hellings-Downs correlation from the transverse-traceless family
+--------------------------------------------------------------------------
+  Part V. Dynamics
+  Waves in the Ether Plenum, Paper 24
+  Section 3. The Transverse Branch and the Tensor Solutions
+  Recomputes: the Hellings-Downs correlation from the transverse-traceless family
+  Waves, and the bounds they set  |  DERIVED
 ==========================================================================
   angle (deg)   HD correlation
         5.73      +0.47692
@@ -246,13 +248,19 @@ CLAIM 12 -- Hellings-Downs correlation from the transverse-traceless family
       135.00      +0.08387
       174.27      +0.24688
 [PASS] quadrupolar signature: positive at small separation, negative near 90 deg
-[NOTE] The medium's elastic wave equation admits the transverse-traceless
+[NOTE] The Plenum's elastic wave equation admits the transverse-traceless
 [NOTE] family EXACTLY, so the plus and cross states and this correlation are
 [NOTE] DERIVED rather than assumed. The arrays' preference for the tensor
 [NOTE] pattern is what the framework predicts.
 
 ==========================================================================
-CLAIM 13 -- The compression residue kappa_L.  BOUNDED, NOT DERIVED
+CLAIM 13 -- The compression residue kappa_L.  BOUNDED BY THE TEST, DERIVED ABOVE THE BOUND
+--------------------------------------------------------------------------
+  Part V. Dynamics
+  The Binary Pulsar Test, Paper 25
+  Section 5. Part C: The Two Leakage Channels
+  Recomputes: kappa_L < 1.3e-4 measured; (c/c_L)^7/18 = 9.3e-3 to 0.23 derived, above it
+  Waves, and the bounds they set  |  DERIVED
 ==========================================================================
 Kramer et al. (2021), PRX 11, 041050, Table V and Eqs. (44), (47), (48):
      observed  Pb_dot = -1.247782e-12
@@ -264,83 +272,328 @@ Kramer et al. (2021), PRX 11, 041050, Table V and Eqs. (44), (47), (48):
 [NOTE] This is not an independent computation. It is the primary source's
 [NOTE] own 95%-confidence figure, correctly applied, and is cited as such.
 
-Order-counting, kappa_L ~ GM/(a c^2), double pulsar J0737-3039:
+WITHDRAWN, order-counting, kappa_L ~ GM/(a c^2), double pulsar J0737-3039:
      a       = 8.78912e+08 m
      kappa_L ~ 4.348e-06   (4.35 parts per million)
-     margin below the bound = 29x
-[PASS] estimate near four parts per million, some thirty times inside the bound
+[NOTE] This estimate stood in versions up to 4.1 and is withdrawn. The computation
+[NOTE] from the framework's own equations, below, does not bear it out.
+
+DERIVED from P1-P5, the orbit's loss to the compression branch:
+     c_L     = sqrt(5/3) c = 3.8703e+08 m/s
+     kappa_L = (c/c_L)^7/18            = 9.295e-03   (Newtonian body force)
+     kappa_L = 25 x that               = 0.232     (full-profile drive)
+     against the measured bound 1.3e-04: over by 72x and 1788x
+[PASS] the derived share lies ABOVE the bound the double pulsar sets
+[PASS] control: at c_L = c with coupling c^2 the same computation returns the scalar quadrupole 1/30 against the tensor 1/5
+[NOTE] THE CLAUSE IS MET. Paper 25 Section 5 states that a future derivation of
+[NOTE] kappa_L from the postulates exceeding 1e-4 falsifies the framework
+[NOTE] retroactively. This is that derivation. The formulation AS FIRST WRITTEN
+[NOTE] fails the double pulsar on its compression branch.
+[NOTE] THE SUCCESSOR, adopted 17 September, narrows the reading law of P5: matter
+[NOTE] reads the settled profile a mass carries and NOT the compression wave, which
+[NOTE] it sources and which light reads through the index. The branch's reaction on
+[NOTE] the bodies is then not exerted, the orbit loses nothing to it, and the pass
+[NOTE] stands on the tensor branch as calculated.
+[NOTE] WHAT THE SUCCESSOR CONCEDES: the third law between body and Plenum for that
+[NOTE] wave alone, at 9.3e-03 of the tensor power. For the settled profile,
+[NOTE] where the Undertow lives, the law holds exactly.
+[NOTE] WHAT IT PREDICTS, and this claim can fail on it: the timing arrays read the
+[NOTE] compression branch by light alone, a dispersive scalar admixture near
+[NOTE] 3.6e-03 of the tensor power (Newtonian drive) or 0.09 (full-profile drive),
+[NOTE] angular factors of order one dropped. A bound on a frequency-dependent scalar
+[NOTE] component below 3.6e-03 in power refutes the successor with the Newtonian drive.
 [NOTE] The pulsar timing arrays give a SECOND and independent handle, in a
 [NOTE] band four decades lower, bounding the scalar-longitudinal amplitude
 [NOTE] of the background below 4.2e-17 (Wu et al. 2022).
-[NOTE] WHAT THE SERIES HAS NOT DERIVED IS THE COEFFICIENT. No computation of
-[NOTE] this coefficient from the continuum equations exists. Producing one
-[NOTE] is the outstanding task, and the elastic reading is withdrawn if the
-[NOTE] coefficient, once computed, exceeds the bound the double pulsar sets.
 
 ==========================================================================
 CLAIM 14 -- Withdrawn: the vorticity account of galactic rotation
+--------------------------------------------------------------------------
+  Part VIII. The Negative Record
+  Galaxies and the Missing Mass, Paper 27
+  Section 4. The Result, and What It Does to NeoGravity
+  Recomputes: the vorticity account of galactic rotation, recorded as withdrawn
+  Galaxies and the expansion  |  WITHDRAWN
 ==========================================================================
-The vorticity account fails by six orders of magnitude, and with the wrong
-radial profile.
-[PASS] WITHDRAWN and recorded as withdrawn
+The vorticity account fails by six orders of magnitude and is withdrawn.
+     entrainment deep inside the source  (4/3)v^3/c^2 = 0.158 m/s
+     against the observed                              2.2e+05 m/s
+     shortfall = (3/4)(c/v)^2                        = 1.393e+06
+[PASS] the shortfall is (3/4)(c/v)^2, between one and ten million
+[NOTE] The failure is in the AMPLITUDE, not the shape. An earlier statement
+[NOTE] that the radial profile is also wrong evaluated an exterior solution
+[NOTE] inside the source; summed properly the profile is far flatter than
+[NOTE] 1/r^2 across the disk. That clause was withdrawn on 16 September 2026.
+[NOTE] Closing the shortfall would need v = 0.87c. No disk galaxy rotates
+[NOTE] at more than about 0.001c, so the failure is structural.
 [NOTE] Within its postulates the framework predicts NO galactic anomaly and
 [NOTE] stands with Newton at galactic scale. This is stated wherever the
 [NOTE] galaxies are discussed, not buried.
 
 ==========================================================================
 CLAIM 15 -- A potential body force sources the compression branch only
+--------------------------------------------------------------------------
+  Part V. Dynamics
+  Waves in the Ether Plenum, Paper 24
+  Section 5. Two Source Theorems, and the Residue
+  Recomputes: curl(grad Phi) = 0: a potential drive sources the compression branch only
+  Waves, and the bounds they set  |  DERIVED
 ==========================================================================
 [PASS] curl(grad Phi) = 0: a potential drive cannot radiate a transverse wave
 [NOTE] The tensor branch therefore needs a solenoidal source. Within P1-P5 the
 [NOTE] candidates are the velocity couplings of P4; see Claim 19 for the numbers.
 
 ==========================================================================
-CLAIM 16 -- The relaxational source rule: kappa_L as a settling time.  MODEL
+CLAIM 16 -- Withdrawn: the relaxational source rule for kappa_L
+--------------------------------------------------------------------------
+  Part V. Dynamics
+  Waves in the Ether Plenum, Paper 24
+  Section 7. Status Updates and Open Items
+  Recomputes: the relaxational source rule, recorded as withdrawn: its tau_s has no home
+  Waves, and the bounds they set  |  WITHDRAWN
 ==========================================================================
 omega_gw = 2 omega_orb = 1.422e-03 s^-1;  kappa_0 = 0.232
 kappa_L < 1.3e-4   <=>   tau_s > 2.970e+04 s  (8.2 h)
 kappa_L ~ 4.3e-06  <=>   tau_s ~ 1.624e+05 s  (1.9 d)
 [PASS] double pulsar bound reads tau_s > 3 x 10^4 s
-     tau_s = tau = 1e+08 s  ->  kappa_L = 1.1e-11
-     tau_s = tau = 1e+17 s  ->  kappa_L = 1.1e-29
-[PASS] anywhere in the relaxation window the residue is >= 10^7 inside the bound
-[NOTE] MODEL: P5 does not state the settling dynamics. This claim can fail: a
-[NOTE] derived tau_s below 3.0e+04 s revokes the pulsar pass. O4 and O6 are one problem.
+
+What would have to supply tau_s > 3.0e+04 s:
+     the Plenum's own settling, a/c_L        = 2.27 s   (short by 4.1 orders)
+     a sourcing-side lag, trailing the Moon  = 3.0e+07 m  (LLR resolves 1e-03 m)
+     lunar laser ranging therefore allows    tau_s < 9.8e-07 s
+[PASS] WITHDRAWN: neither the postulates nor the sourcing supplies the settling time the rule needs
+[NOTE] Recorded as withdrawn rather than deleted. The arithmetic above is the
+[NOTE] arithmetic that withdrew it, and Claim 13 now derives kappa_L directly,
+[NOTE] with no settling time in it at all.
 
 ==========================================================================
-CLAIM 17 -- The wave-sector energy is NOT the medium's inertia.  POSTULATE RECORDED
+CLAIM 17 -- The wave-sector energy is NOT the Plenum's inertia.  POSTULATE RECORDED
+--------------------------------------------------------------------------
+  Part V. Dynamics
+  Waves in the Ether Plenum, Paper 24
+  Section 7. Status Updates and Open Items
+  Recomputes: the wave-sector energy as coupling-set field energy, (c^2/16 pi G) h_dot^2
+  Waves, and the bounds they set  |  POSTULATED
 ==========================================================================
 rho_0 = 4.6451e-31 kg m^-3
 F_el / F_GR at the double pulsar = 16 pi G rho_0 / omega^2 = 7.70e-34
 the two agree only at omega = 3.95e-20 s^-1, a period of 5043 Gyr
-[PASS] a medium of density rho_0 cannot carry the binary's luminosity as kinetic energy
+[PASS] a Plenum of density rho_0 cannot carry the binary's luminosity as kinetic energy
 [NOTE] The energy law adopted is field energy set by the coupling, (c^2/16 pi G) h_dot^2,
-[NOTE] the electromagnetic reading; four mechanical readings are set aside (Paper 24).
+[NOTE] the electromagnetic reading; four readings from the Plenum's own mechanics
 [NOTE] It is a postulate, entered as one. kappa_L, a ratio of amplitudes, is unaffected.
 
 ==========================================================================
 CLAIM 18 -- The relaxation window's top is the Hubble time; a galaxy lies below it
+--------------------------------------------------------------------------
+  Part III. The Law
+  Newton's Formulas Corrected, According to NeoGravity, Paper 39
+  Section 3. The First Law  |  3.5 A Question the Constants Raise
+  Recomputes: the relaxation window top at 1/H0, and a galaxy crossing De = 1 at 4.6e15 s
+  Galaxies and the expansion  |  MODEL
 ==========================================================================
 H0 = 67.4 km/s/Mpc:  1/H0 = 4.578e+17 s  (window top printed as 1e17 s; ratio 4.6)
 H0 = 73.0 km/s/Mpc:  1/H0 = 4.227e+17 s  (window top printed as 1e17 s; ratio 4.2)
-galactic Deborah crossing R/v = 4.21e+15 s (Paper 39: 4.6e15 s)
+galactic Deborah crossing R/v = 4.63e+15 s (Paper 39: 4.6e15 s)
 [PASS] the printed upper bound 1e17 s is the Hubble time to within a factor of five
+[PASS] crossing time 4.629e+15 s reproduces Paper 39's 4.6e15 s
 [PASS] the galactic crossing lies inside the window, below its top
-[NOTE] MODEL: if the drift of O7 is the medium's Maxwell flow, tau sits near 1/H0 and every
+[NOTE] MODEL: if the drift of O7 is the Plenum's Maxwell flow, tau sits near 1/H0 and every
 [NOTE] galaxy is treated elastically (no bulk dissipation), consistent with Newton at galactic scale.
-[NOTE] Gauge: observed galactic-scale medium dissipation would refute the reading.
+[NOTE] Gauge: observed galactic-scale Plenum dissipation would refute the reading.
 
 ==========================================================================
-CLAIM 19 -- The transverse source: what the medium needs, and what P4 viscous coupling gives
+CLAIM 19 -- The transverse source: what the Plenum needs, and what P4 entrainment gives
+--------------------------------------------------------------------------
+  Part V. Dynamics
+  Waves in the Ether Plenum, Paper 24
+  Section 5. Two Source Theorems, and the Residue
+  Recomputes: the solenoidal force the tensor branch needs, against what P4 entrainment gives
+  Waves, and the bounds they set  |  DERIVED
 ==========================================================================
-F_req ~ 7.34e-03 N  =  1.3e-35 of the gravitational force between the stars
-     tau = 1e+08 s: viscous entrainment F = 4.5e-14 N, short by 1.6e+11
-     tau = 1e+12 s: viscous entrainment F = 4.5e-18 N, short by 1.6e+15
-     tau = 1e+17 s: viscous entrainment F = 4.5e-23 N, short by 1.6e+20
-[PASS] the viscous coupling cannot source the tensor branch anywhere in the window
-[NOTE] The remaining solenoidal coupling in P1-P5 is the rotational entrainment of P4 (frame
-[NOTE] dragging, Paper 26), whose amplitude is inherited. The tensor amplitude of a binary
-[NOTE] inherits at the same place: one item to derive, the coefficient of rotational entrainment.
+equivalent point force (what 4.0 compared) = 7.338e-03 N
+k a = 4.170e-03, so the per-star dipole requirement F = 3.52 N
+[PASS] the dipole requirement exceeds the equivalent point force by 1/(k a)
+[PASS] Paper 26's slip fraction and its dissolved length R_eff are one statement
+[PASS] the slip fraction is Paper 26's twelve percent for the A star
+[PASS] CONTROL: the elastic stiffness reduces to 6 pi mu R when the Plenum is incompressible
+full no-slip elastic grip k u = 3.082 N
+at Paper 26's slip fraction 0.1153:  F = 0.3553 N
+SHORT BY A FACTOR OF 9.9
+[PASS] the shortfall is a small factor, not the 1e11 to 1e20 of version 4.0
+[PASS] and it is a shortfall: this claim does not close the ninth problem
+[PASS] CROSS-CHECK: the requirement agrees with transverse_source.py's independent moment-tensor route, 3.52 N; a factor slipped anywhere in the four lines above breaks this
+[PASS] and the shortfall is the factor of ten the papers now carry
+[NOTE] MODEL: the stiffness is a small-displacement result used at u/R = 3.5e+04, and Paper 26 derives the slip fraction for ROTATION at zero frequency.
+[NOTE] Both make the figure generous, so the shortfall is a floor. The residue is carried
+[NOTE] in the working draft and not in a paper, under the rule that an unexhausted
+[NOTE] failure is not published until the research on it is exhausted.
+
+==========================================================================
+CLAIM 20 -- Nonlinearity parameter beta = 1.  DERIVED from the perihelion coefficient
+--------------------------------------------------------------------------
+  Part 0. The Program
+  The Central Roadmap, Paper 20
+  Section 3. What Follows Without Further Assumption  |  3.2 Motion
+  Recomputes: beta = 1, read off the perihelion coefficient
+  The Plenum, and its constants  |  DERIVED
+==========================================================================
+PPN perihelion advance = [(2 - beta + 2 gamma)/3] * 6 pi GM / [a c^2 (1 - e^2)]
+Claim 7 reproduced the GR coefficient exactly, so the bracket equals 1.
+With the framework's gamma = 1 (Claim 5):   beta = 1
+[PASS] beta = 1 follows from the perihelion coefficient and gamma = 1
+[NOTE] beta is therefore not an independent fit. The one fitted quantity
+[NOTE] remains k = 2/3, equivalently gamma.
+
+==========================================================================
+CLAIM 21 -- Shear modulus mu = rho_0 c^2.  DERIVED at rho_0
+--------------------------------------------------------------------------
+  Part II. The Plenum
+  The Law of the Ether Plenum, Paper 21
+  Section 4. The Constitutive Law
+  Recomputes: mu = rho_0 c^2, fixed by transverse waves propagating at c
+  The Plenum, and its constants  |  DERIVED
+==========================================================================
+Transverse wave speed in an elastic medium:  c_T = sqrt(mu / rho)
+The framework requires c_T = c at the ambient density:
+     sqrt(mu / rho_0) = c    ->    mu = c**2*rho_0
+[PASS] mu(rho_0) = rho_0 c^2
+[NOTE] READ THE CONDITION WHERE IT IS IMPOSED. Both derivations in the corpus
+[NOTE] (The Law of the Ether Plenum, Paper 21, para 70; Waves in the Ether Plenum,
+[NOTE] Paper 24, para 31) write sqrt(mu/rho_0), at the AMBIENT density. What is
+[NOTE] derived is therefore the NORMALISATION mu(rho_0), not the density
+[NOTE] dependence mu(rho). Nothing in P1-P5 supplies mu(rho) away from rho_0.
+
+==========================================================================
+CLAIM 22 -- Finding A6.1: steady amplitudes are viscosity-independent
+--------------------------------------------------------------------------
+  Part V. Dynamics
+  How Spinning Masses Stir the Ether Plenum, Paper 26
+  Section 5. Finding A6.1: Rotation Cannot Measure the Viscosity
+  Recomputes: Finding A6.1: steady amplitudes are independent of the viscosity
+  Waves, and the bounds they set  |  DERIVED
+==========================================================================
+Steady Stokes field of a rotating sphere:  v_phi = Omega R^3 sin(theta) / r^2
+     the azimuthal Stokes operator applied to it = 0
+     free symbols of v_phi: ['Omega', 'R', 'r', 'theta']
+[PASS] the steady solution satisfies the equation for ANY eta and contains none
+[NOTE] A rotation experiment measures this amplitude, so it cannot measure eta.
+[NOTE] Finding A6.1. The eta determination is displaced to relaxation phenomena
+[NOTE] (What the Ether Plenum Is Made Of, Paper 35), where the time constant enters.
+
+==========================================================================
+CLAIM 23 -- Finding A6.2: the barotropic law annihilates the baroclinic source
+--------------------------------------------------------------------------
+  Part V. Dynamics
+  How Spinning Masses Stir the Ether Plenum, Paper 26
+  Section 6. Finding A6.2: The Baroclinic Route Is Closed
+  Recomputes: Finding A6.2: the barotropic law annihilates the baroclinic source
+  Waves, and the bounds they set  |  DERIVED
+==========================================================================
+Baroclinic vorticity source:  (grad rho) x (grad p) / rho^2
+With the barotropic law p = p(rho), grad p is parallel to grad rho:
+     (grad rho) x (grad p) = Matrix([[0, 0, 0]])
+[PASS] the baroclinic source vanishes identically, for every density field
+[NOTE] Finding A6.2. The classical mechanism for generating vorticity is not
+[NOTE] available to this Plenum at all, which is why the galactic vorticity
+[NOTE] account had to be withdrawn rather than repaired (Claim 14).
+
+==========================================================================
+CLAIM 24 -- Finding A8.1: the inflow is strictly subluminal.  NO ACOUSTIC HORIZON
+--------------------------------------------------------------------------
+  Part VI. The Strong Field
+  Black Holes Without Horizons, Paper 28
+  Section 4. Finding A8.1: No Acoustic Horizon Either
+  Recomputes: Finding A8.1: v/c = sqrt(1 - e^(-2x)) = 0.795 at the capture surface
+  The strong field  |  DERIVED
+==========================================================================
+Time factor of the exponential metric:   exp(-x),  x = GM / (r c^2)
+River-form inflow speed:                 v/c = sqrt(1 - exp(-2x))
+     capture surface r = 2GM/c^2  ->  x = 1/2  ->  v/c = 0.7951
+     limit as r -> 0 (x -> oo):        v/c -> 1
+[PASS] v/c = 0.7951 at the capture surface, as Paper 28 states (0.795)
+[PASS] v < c at every finite radius; c is approached only asymptotically
+
+The standard river, for comparison:      v/c = sqrt(r_s / r)
+     at r = r_s:                         v/c = 1  (a sonic surface exists)
+[PASS] the Schwarzschild river REACHES c at r_s; this profile never does
+[NOTE] Finding A8.1. There is no sonic surface and no acoustic black hole in
+[NOTE] the framework's profile. The Unruh-Visser analogue construction is cited
+[NOTE] throughout NeoGravity for what it proves about media reproducing horizon
+[NOTE] kinematics; this profile does not reproduce them, and the metaphor is
+[NOTE] demoted by the framework's own arithmetic.
+
+==========================================================================
+CLAIM 25 -- The areal radius, and the wormhole rival.  THE RIVAL STANDS
+--------------------------------------------------------------------------
+  Part II. The Plenum
+  The Law of the Ether Plenum, Paper 21
+  Section 7. Prior Art and Counter-Evidence
+  Recomputes: R(r) = r e^(m/r) is stationary at r = GM/c^2; the wormhole rival stands
+  The strong field  |  RECORDED
+==========================================================================
+Areal radius of the exponential metric:  R(r) = r exp(m / r),   m = GM/c^2
+     dR/dr = (-m + r)*exp(m/r)/r
+     stationary at r = m  =  GM/c^2
+     the capture surface lies at r = 2GM/c^2, so the stationary point is inside it
+[PASS] the areal radius has a stationary point at r = GM/c^2, as Boonserm et al. show
+[NOTE] THIS SUITE DOES NOT SETTLE THE QUESTION, AND SAYS SO. The stationary
+[NOTE] point is a property of the metric. Whether it is a traversable throat
+[NOTE] depends on what sources the geometry: a phantom scalar in the geometric
+[NOTE] reading, the Ether Plenum's equilibrium in this framework's. That is a
+[NOTE] question about stress-energy, not about R(r), and it is argued in Paper 29.
+[NOTE] Paper 28 records the rival as standing. Nothing here promotes or retires it.
+
+==========================================================================
+CLAIM 26 -- Finding A12.1: the constitutive arrow.  NO TIME-REVERSED THRESHOLD
+--------------------------------------------------------------------------
+  Part VI. The Strong Field
+  Black Holes and White Holes, Paper 32
+  Section 3. Finding A12.1: Two Exclusions
+  Recomputes: Finding A12.1: the constitutive arrow; no time-reversed threshold
+  The strong field  |  DERIVED
+==========================================================================
+Maxwell element, deviatoric stress relaxing with time constant tau > 0:
+     Eq(Derivative(sigma(t), t) + sigma(t)/tau, 0)
+     solution: Eq(sigma(t), C1*exp(-t/tau))
+Send t -> -t. The same equation becomes  d(sigma)/dt - sigma/tau = 0,
+whose solution grows without bound: stress un-relaxing of its own accord.
+     forward at t = 1:  0.367879
+     reversed at t = 1: 2.718282
+[PASS] relaxation has no inverse: the constitutive law is not time-reversal invariant
+[NOTE] Finding A12.1. A white threshold is the time-reverse of a threshold, and
+[NOTE] P4 gives the Plenum an arrow. The exclusion is unconditional for any
+[NOTE] tau > 0, so it does not depend on where in the window tau falls (Claim 18).
+[NOTE] With Claim 24 this gives the framework's two clean negative predictions:
+[NOTE] no echoes, because there is no membrane to reflect from, and no white holes.
+[NOTE] Either is falsified by a single confirmed observation.
+
+==========================================================================
+CLAIM 27 -- Finding A13.1: the conformal mapping, and the three inherited tests
+--------------------------------------------------------------------------
+  Part VII. Cosmology and Constitution
+  Cosmic Expansion in the Ether Plenum, Paper 33
+  Section 2. Finding A13.1: The Density Drift, as a Mapping
+  Recomputes: Finding A13.1: the conformal mapping, and the three inherited tests
+  Galaxies and the expansion  |  DERIVED
+==========================================================================
+Flat expanding line element in conformal time:
+     ds^2 = a(eta)^2 [ -c^2 deta^2 + dx^2 ]
+A null ray has dx/deta = c, independent of a: the conformal factor rescales
+all wave speeds, clocks and rulers together, which is a homogeneous Plenum
+whose index drifts secularly. The framework's knob is the ambient density rho_0.
+
+The three tests that kill every static-medium redshift, inherited exactly:
+     time dilation        Dt_obs / Dt_em = z + 1
+     surface brightness   S ~ (z + 1)**(-4)
+     blackbody            T_em / T_obs = z + 1
+[PASS] dilation, Tolman dimming and the blackbody scaling all follow from the factor a
+[NOTE] Finding A13.1, and it is a MAPPING, not a driver. What makes rho_0 drift
+[NOTE] is not supplied by P1-P5: Status Register row 15 reads 'Unsupplied; the
+[NOTE] expansion history is adopted, not derived'. The suite checks the
+[NOTE] kinematic side and says plainly that the dynamic side is absent.
+[NOTE] Scattering-based redshifts smear the blackbody; a conformal rescaling
+[NOTE] does not, which is the whole of the separation argument.
 
 ==========================================================================
 DIMENSIONAL CONSISTENCY
@@ -356,38 +609,186 @@ With rho = rho_0 exp(3GM/rc^2):  grad ln rho = -3GM/(r^2 c^2)
 ==========================================================================
 SUMMARY OF EPISTEMIC STATUS
 ==========================================================================
-DERIVED     : ambient density rho_0 from the CMB
-              equation of state w = 1/3, from tracelessness
-              equilibrium profile rho = rho_0 exp(3GM/rc^2)
-              temporal response coefficient, from energy conservation
-              density-gradient law g = -(c^2/3) grad ln rho
-              transverse-traceless wave family and Hellings-Downs
-              inverse-square form of the Undertow (shell geometry)
-              perihelion advance; redshift; Shapiro delay
+DERIVED      :
+   Claim  1   rho(r) = rho_0 exp(3GM/rc^2) from the inward load under hydrostatic equilibrium
+   Claim  2   the exponent depends on 1/r; the 1/r potential appears only at first order
+   Claim  3   w = 1/3 from the tracelessness of a massless stress tensor
+   Claim  4   rho_0 = a T_CMB^4 / c^2, the measured ambient mass-equivalent density
+   Claim  7   Mercury's perihelion advance, 42.98 arcsec per century, with no calibration used
+   Claim  8   the solar gravitational redshift and the Shapiro delay at superior conjunction
+   Claim 11   the coupling tracks mass-energy and not thermal luminosity
+   Claim 12   the Hellings-Downs correlation from the transverse-traceless family
+   Claim 13   kappa_L < 1.3e-4 measured; (c/c_L)^7/18 = 9.3e-3 to 0.23 derived, above it
+   Claim 15   curl(grad Phi) = 0: a potential drive sources the compression branch only
+   Claim 19   the solenoidal force the tensor branch needs, against what P4 entrainment gives
+   Claim 20   beta = 1, read off the perihelion coefficient
+   Claim 21   mu = rho_0 c^2, fixed by transverse waves propagating at c
+   Claim 22   Finding A6.1: steady amplitudes are independent of the viscosity
+   Claim 23   Finding A6.2: the barotropic law annihilates the baroclinic source
+   Claim 24   Finding A8.1: v/c = sqrt(1 - e^(-2x)) = 0.795 at the capture surface
+   Claim 26   Finding A12.1: the constitutive arrow; no time-reversed threshold
+   Claim 27   Finding A13.1: the conformal mapping, and the three inherited tests
+   (no claim) temporal response coefficient, from energy conservation
+   (no claim) density-gradient law g = -(c^2/3) grad ln rho
+   (no claim) inverse-square form of the Undertow (shell geometry)
 
-FITTED      : optical exponent k = 2/3, equivalently the PPN gamma
+FITTED       :
+   Claim  5   k = 2/3 from 3k = 2; the one fitted quantity, numerically the PPN gamma
 
-DEFINITIONAL: R_eff, by Omega R_eff^3 = 2GJ/c^2. Not a fit.
+DEFINITIONAL :
+   Claim 10   R_eff by Omega R_eff^3 = 2GJ/c^2; a definition, not a second fitted constant
 
-PREDICTED, NOT YET MEASURABLE:
-              second-order solar-limb deflection, 0.73 microarcsec
-              photon-capture diameter, 4.63 % above Schwarzschild
+PREDICTED    :
+   Claim  6   the second-order deflection difference at the solar limb, 0.73 microarcsec
+   Claim  9   the photon-capture diameter, 4.63 percent above the Schwarzschild shadow
 
-BOUNDED, NOT DERIVED:
-              compression residue kappa_L < 1.3e-4 (double pulsar)
-              scalar-longitudinal amplitude < 4.2e-17 (pulsar arrays)
+BOUNDED      :
+   (no claim) scalar-longitudinal amplitude < 4.2e-17 (pulsar arrays)
 
-WITHDRAWN   : the vorticity account of galactic rotation
+MODEL        :
+   Claim 18   the relaxation window top at 1/H0, and a galaxy crossing De = 1 at 4.6e15 s
 
-MODEL       : relaxational source rule, kappa_L = kappa_0/(omega tau_s)^2 (Claim 16)
-              the window top as the Hubble time; galaxies elastic (Claim 18)
-POSTULATED  : wave-sector energy (c^2/16 pi G) h_dot^2 (Claim 17)
-OPEN        : kappa_L from the continuum equations; k from first
-              principles; strong field; a quantum treatment
+POSTULATED   :
+   Claim 17   the wave-sector energy as coupling-set field energy, (c^2/16 pi G) h_dot^2
+
+RECORDED     :
+   Claim 25   R(r) = r e^(m/r) is stationary at r = GM/c^2; the wormhole rival stands
+
+WITHDRAWN    :
+   Claim 14   the vorticity account of galactic rotation, recorded as withdrawn
+   Claim 16   the relaxational source rule, recorded as withdrawn: its tau_s has no home
+
+NEGATIVE PREDICTIONS, CLEAN AND FALSIFIABLE:
+              no echoes: there is no membrane to reflect from (Claim 24)
+              no white holes: relaxation has no inverse (Claim 26)
+
+
+==========================================================================
+THE OPEN PROBLEMS, AS PAPER 21 SECTION 8 STATES THEM
+==========================================================================
+Nine are not derived. Three of them, marked DECIDER, decide whether the postulates are
+a physics or a description. Any one of the nine may turn out to be the reason the whole
+account is wrong.
+
+  1. The asymptotic density rho_0
+     UNKNOWN
+     Not a number waiting on a better instrument: scaling rho and rho_0
+     together leaves eleven of the listed quantities invariant and moves
+     only controls, so rho_0 is the scale of an invariance of P1-P5.
+     Observation can give a lower bound and nothing else, and the CMB
+     gives it: rho_0 >= 4.645e-31 kg/m^3. Determination falls to Paper 35
+     and nowhere else.
+
+  2. The optical exponent k = 2/3
+     FITTED
+     Paper 21 para 99 says this is problem 8 approached from the other
+     side, and it is: with mu proportional to rho^a, k = (1 - a)/2 and a
+     = 1 - 4w, so w = 1/3 forces a = -1/3. That re-expresses the fitted
+     constant rather than deriving it. Still exactly one fitted quantity.
+
+  3. The relaxation time tau
+     BOUNDED   DECIDER
+     Pulsar timing puts the floor near 1e8 s and cosmological fluidity
+     the ceiling near 1/H0, which is 9.7 decades. The transmission bound
+     of Paper 24 Section 3, that a transverse wave loses one factor of e
+     over 2 c tau, leaves 0.65 decades on its own. The corpus carries the
+     full nine through the rest of the framework on purpose, because that
+     bound rests on one argument.
+
+  4. The fate of the longitudinal mode
+     ANSWERED, AT A PRICE
+     The compression sector is bounded by the double pulsar at kappa_L <
+     1.3e-4 and DERIVED, at (c/c_L)^7/18 = 9.3e-3 to 0.23, above that
+     bound. The formulation as first written therefore fails there, and
+     the successor has matter read the settled profile and not the
+     compression wave, which gives up the third law between body and
+     Plenum for that wave alone. What is now open is why the wave a body
+     sources is not read by it. Claim 13.
+
+  5. Collins's objection: the preferred frame and particle physics
+     UNANSWERED   DECIDER
+     It divides, and the classical half no longer has the answer it had.
+     The estimate that passed rested on the relaxational source rule,
+     which Claim 16 withdraws, so the classical leak is once again
+     unanswered rather than answered cheaply. The RADIATIVE leak, which
+     is what Collins et al. computed, cannot be posed at all without a
+     quantum matter sector.
+
+  6. What a mass does to maintain the P5 profile
+     UNSUPPLIED   DECIDER
+     P5 states the equilibrium profile as a boundary condition and does
+     not derive how a mass holds it, and the successor of Claim 13 adds a
+     second question to it: why matter reads the settled profile and not
+     the compression wave it sources. The settling time tau_s that once
+     joined this problem to the residue is withdrawn with Claim 16.
+
+  7. What drives the drift of the ambient density
+     UNSUPPLIED
+     Nothing in the postulates drives rho_0 in time; the expansion
+     history is adopted rather than derived. Paper 33 Section 4 states
+     what is missing exactly: the late acceleration requires an effective
+     pressure of the opposite sign, which in a fluid is a bulk
+     dissipative term. With problems 4 and 6 this is one absence seen
+     three times. Claim 27 checks the kinematic side and says plainly
+     that the dynamic side is absent.
+
+  8. The shear modulus against the fitted optical exponent
+     IN CONFLICT
+     P4 fixes only mu(rho_0) = rho_0 c^2, a normalisation and not a
+     density dependence, and the conflict appears only when mu is carried
+     across the wave zone as a constant. The admissible family is mu =
+     rho_0 c^2 (rho/rho_0)^a with a undetermined by P1-P5, and the
+     measured deflection alone forces a < 0: the Plenum must soften under
+     compression.
+
+  9. The coefficient of rotational entrainment
+     UNSUPPLIED
+     A bound binary exerts no net force on the Plenum, so its drive is a
+     force dipole and not a point force: Paper 20 Section 3.3 forbids the
+     dipole for a bound system and that premise says nothing about
+     branches. Each star must press on the Plenum with about 4 N at twice
+     the orbital frequency. P4 entrainment at the slip fraction Paper 26
+     Section 3 derives supplies about a tenth of it, so what is open is
+     the value of one coefficient and a factor of about ten, not whether
+     the Plenum can carry it at all. Claims 15 and 19 are this problem.
+
+  and one addendum, which is not a problem of the postulates
+     The parametrized post-Newtonian table is incomplete. Not a problem
+     of the postulates, but it belongs beside them: gamma is calibrated
+     at unity and beta derived at unity, and xi, the preferred-frame
+     parameters alpha_1, alpha_2 and alpha_3, and the conservation-law
+     parameters zeta_1 to zeta_4 are not computed. A plenum with a
+     preferred foliation will be asked about alpha_1 and alpha_2 before
+     it is asked about anything else.
+
+NOT ON THE REGISTER, and kept off it on purpose
+  scope limits, which the framework does not attempt:
+     the strong field
+     a quantum treatment of the Plenum
+  tasks for this program, which are not problems of the postulates:
+     the radiated power computed from scratch rather than inherited
+     the threshold ringdown spectrum
+     the exponential-profile imaging calibration
+     the rotating threshold
+     the radiative-transfer account of the darkness
 
 >>> ONE fitted constant: the optical exponent k = 2/3. <<<
 >>> w = 1/3 is DERIVED. R_eff is DEFINITIONAL. State this plainly. <<<
 
 ==========================================================================
-[PASS] all checks passed. NeoGravity Verification Suite v4.0.
+THE TWENTY-SEVEN, BY INSTRUMENT
+==========================================================================
+The Plenum, and its constants      1, 2, 3, 4, 5, 20, 21
+The solar system                   6, 7, 8, 10, 11
+The strong field                   9, 24, 25, 26
+Waves, and the bounds they set     12, 13, 15, 16, 17, 19, 22, 23
+Galaxies and the expansion         14, 18, 27
+
+Run one instrument with  --family cosmos | --family plenum | --family solar | --family strong | --family waves
+Run one claim with       --claim N        The whole register:  --register
+Machine-readable:        --json           (the website's page is built from it)
+
+==========================================================================
+[PASS] all checks passed. NeoGravity Verification Suite v4.2.
+[PASS] 27 claims computed, every one naming its Part, paper and section.
 ==========================================================================
