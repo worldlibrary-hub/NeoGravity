@@ -4,6 +4,7 @@ Companion computational materials for **The Theory of NeoGravity & Ether Dynamic
 
 **John Salvatore Guagliardo**, Researcher, World Library Foundation\
 ORCID: [0000-0003-0756-6886](https://orcid.org/0000-0003-0756-6886)\
+http://www.NeoGravity.org
 
 **Version 4.2 · 17 September 2026.** Supersedes version 4.1 (14 September 2026), which
 superseded 4.0 (6 September 2026), 3.1 and 2.0. **Twenty-seven claims**; version 4.0
