@@ -1,15 +1,30 @@
 RELEASING A VERSION OF THE SUITE
+Corrected 17 September 2026.
 
-This folder is the repository's contents. To release:
+RELEASE-v4.2\ is the repository's contents and the Zenodo upload. To release:
 
-1. Commit the files, tag the commit with the version (v4.0), and publish the tag
-   as a GitHub release.
-2. If the repository is linked to Zenodo, the release mints a new version under
-   the concept DOI 10.5281/zenodo.22087714 (which stays the citable identifier).
-   If not linked, upload verify_neogravity.py, README.txt, README.pdf, sample_output.txt and
-   CITATION.cff to the existing Zenodo record as a NEW VERSION; do not create a
-   new record.
-3. Run before releasing:  python3 verify_neogravity.py   (exit 0; the output should
-   match sample_output.txt apart from the timestamp, if any).
+1. Commit the nine files, tag the commit with the version (v4.2), and publish the
+   tag as a GitHub release. The release is:
+     verify_neogravity.py   verify_neogravity.txt   LICENSE
+     README.txt             README.pdf              CITATION.cff
+     sample_output.txt      claim_register.txt      requirements.txt
+   LICENSE goes up with them. It is what makes GitHub show a licence at all; the
+   repository has shown none because no licence file was ever pushed.
+
+2. Zenodo: a NEW VERSION on the existing record 10.5281/zenodo.22087714, not a new
+   record. Zenodo keeps one identifier for the publication and holds the versions
+   inside it, showing the newest by default, so the identifier in CITATION.cff and
+   in the papers does not change and does not need to.
+   If the repository is linked to Zenodo, publishing the tag mints the new version
+   for you. If it is not linked, upload the nine files to the record by hand and
+   choose New version.
+
+3. Run before releasing:  python3 verify_neogravity.py
+   It must exit 0, and its output must match sample_output.txt apart from a
+   timestamp. If it exits non-zero, a claim has failed and the release is not ready.
+
+4. Keep out of the upload: the series.* citation files, README.md and README (v2).txt.
+   They are in the parent folder, not in RELEASE-v4.2\, and WHAT-IS-CURRENT.txt says
+   why. The citation bundle is regenerated after the papers are deposited, not before.
 
 Requirements: Python 3, sympy, numpy (requirements.txt).
