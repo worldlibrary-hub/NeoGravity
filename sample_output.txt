@@ -309,9 +309,9 @@ DERIVED from P1-P5, the orbit's loss to the compression branch:
 ==========================================================================
 CLAIM 14 -- Withdrawn: the vorticity account of galactic rotation
 --------------------------------------------------------------------------
-  Part VIII. The Negative Record
+  Part VIII. The Limits of the Postulates
   Galaxies and the Missing Mass, Paper 27
-  Section 4. The Result, and What It Does to NeoGravity
+  Section 4. The Result: Newton at Galactic Scale
   Recomputes: the vorticity account of galactic rotation, recorded as withdrawn
   Galaxies and the expansion  |  WITHDRAWN
 ==========================================================================
@@ -348,7 +348,7 @@ CLAIM 16 -- Withdrawn: the relaxational source rule for kappa_L
 --------------------------------------------------------------------------
   Part V. Dynamics
   Waves in the Ether Plenum, Paper 24
-  Section 7. Status Updates and Open Items
+  Section 7. Status Updates
   Recomputes: the relaxational source rule, recorded as withdrawn: its tau_s has no home
   Waves, and the bounds they set  |  WITHDRAWN
 ==========================================================================
@@ -371,7 +371,7 @@ CLAIM 17 -- The wave-sector energy is NOT the Plenum's inertia.  POSTULATE RECOR
 --------------------------------------------------------------------------
   Part V. Dynamics
   Waves in the Ether Plenum, Paper 24
-  Section 7. Status Updates and Open Items
+  Section 7. Status Updates
   Recomputes: the wave-sector energy as coupling-set field energy, (c^2/16 pi G) h_dot^2
   Waves, and the bounds they set  |  POSTULATED
 ==========================================================================
@@ -469,7 +469,7 @@ CLAIM 22 -- Finding A6.1: steady amplitudes are viscosity-independent
 --------------------------------------------------------------------------
   Part V. Dynamics
   How Spinning Masses Stir the Ether Plenum, Paper 26
-  Section 5. Finding A6.1: Rotation Cannot Measure the Viscosity
+  Section 5. Finding A6.1: The Viscosity Cancels from Steady Turning
   Recomputes: Finding A6.1: steady amplitudes are independent of the viscosity
   Waves, and the bounds they set  |  DERIVED
 ==========================================================================
@@ -486,7 +486,7 @@ CLAIM 23 -- Finding A6.2: the barotropic law annihilates the baroclinic source
 --------------------------------------------------------------------------
   Part V. Dynamics
   How Spinning Masses Stir the Ether Plenum, Paper 26
-  Section 6. Finding A6.2: The Baroclinic Route Is Closed
+  Section 6. Finding A6.2: The Plenum Turns Only as Matter Turns It
   Recomputes: Finding A6.2: the barotropic law annihilates the baroclinic source
   Waves, and the bounds they set  |  DERIVED
 ==========================================================================

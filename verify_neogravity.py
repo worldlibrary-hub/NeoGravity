@@ -134,9 +134,12 @@ accompanying paper's central epistemic claim was false. The four:
   block, and the other eleven cite "Version 2.0". This release takes the
   number nine papers already carry in print, so that those nine become correct
   on deposit and the remaining eleven are the ones amended. The DOI is
-  unchanged by this release. The live identifier is
-  10.5281/zenodo.22087714; 10.5281/zenodo.22080221 is retired and must not be
-  cited (errata 37).
+  unchanged by this release. The identifier of record is
+  10.5281/zenodo.22080221, re-verified at Zenodo on 18 September 2026.
+  An earlier note in this header named a different record and called this
+  one retired; that was backwards. While the Zenodo record awaits approval
+  the archive to cite is the repository:
+  https://github.com/worldlibrary-hub/NeoGravity.
 
 WHAT CHANGED FROM VERSION 4.0 (14 September 2026)
 -------------------------------------------------
@@ -340,9 +343,9 @@ REGISTER = {
         recomputes='kappa_L < 1.3e-4 measured; (c/c_L)^7/18 = 9.3e-3 to 0.23 derived, above it'),
     14: dict(
         name='Withdrawn: the vorticity account of galactic rotation',
-        part='VIII. The Negative Record',
+        part='VIII. The Limits of the Postulates',
         paper=27, paper_title='Galaxies and the Missing Mass',
-        section='4. The Result, and What It Does to NeoGravity',
+        section='4. The Result: Newton at Galactic Scale',
         subsection=None,
         family='cosmos', status='WITHDRAWN',
         recomputes='the vorticity account of galactic rotation, recorded as withdrawn'),
@@ -358,7 +361,7 @@ REGISTER = {
         name='Withdrawn: the relaxational source rule for kappa_L',
         part='V. Dynamics',
         paper=24, paper_title='Waves in the Ether Plenum',
-        section='7. Status Updates and Open Items',
+        section='7. Status Updates',
         subsection=None,
         family='waves', status='WITHDRAWN',
         recomputes='the relaxational source rule, recorded as withdrawn: its tau_s has no home'),
@@ -366,7 +369,7 @@ REGISTER = {
         name="The wave-sector energy is NOT the Plenum's inertia.  POSTULATE RECORDED",
         part='V. Dynamics',
         paper=24, paper_title='Waves in the Ether Plenum',
-        section='7. Status Updates and Open Items',
+        section='7. Status Updates',
         subsection=None,
         family='waves', status='POSTULATED',
         recomputes='the wave-sector energy as coupling-set field energy, (c^2/16 pi G) h_dot^2'),
@@ -406,7 +409,7 @@ REGISTER = {
         name='Finding A6.1: steady amplitudes are viscosity-independent',
         part='V. Dynamics',
         paper=26, paper_title='How Spinning Masses Stir the Ether Plenum',
-        section='5. Finding A6.1: Rotation Cannot Measure the Viscosity',
+        section='5. Finding A6.1: The Viscosity Cancels from Steady Turning',
         subsection=None,
         family='waves', status='DERIVED',
         recomputes='Finding A6.1: steady amplitudes are independent of the viscosity'),
@@ -414,7 +417,7 @@ REGISTER = {
         name='Finding A6.2: the barotropic law annihilates the baroclinic source',
         part='V. Dynamics',
         paper=26, paper_title='How Spinning Masses Stir the Ether Plenum',
-        section='6. Finding A6.2: The Baroclinic Route Is Closed',
+        section='6. Finding A6.2: The Plenum Turns Only as Matter Turns It',
         subsection=None,
         family='waves', status='DERIVED',
         recomputes='Finding A6.2: the barotropic law annihilates the baroclinic source'),

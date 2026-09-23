@@ -1,10 +1,10 @@
-# NeoGravity Verification Suite
+﻿# NeoGravity Verification Suite
 
 Companion computational materials for **The Theory of NeoGravity & Ether Dynamics**
 
 **John Salvatore Guagliardo**, Researcher, World Library Foundation\
 ORCID: [0000-0003-0756-6886](https://orcid.org/0000-0003-0756-6886)\
-http://www.NeoGravity.org
+Archive: [https://github.com/worldlibrary-hub/NeoGravity](https://github.com/worldlibrary-hub/NeoGravity) · DOI [10.5281/zenodo.22080221](https://doi.org/10.5281/zenodo.22080221)
 
 **Version 4.2 · 17 September 2026.** Supersedes version 4.1 (14 September 2026), which
 superseded 4.0 (6 September 2026), 3.1 and 2.0. **Twenty-seven claims**; version 4.0
@@ -335,7 +335,7 @@ Every constant used is either exactly defined or unchanged from CODATA 2018.
 
 > Guagliardo, J. S. (2026). *NeoGravity verification suite: Computational checks
 > for the Theory of NeoGravity & Ether Dynamics* (Version 4.2) [Computer
-> software]. Zenodo. https://doi.org/10.5281/zenodo.22087714
+> software]. https://github.com/worldlibrary-hub/NeoGravity
 
 ## License
 
