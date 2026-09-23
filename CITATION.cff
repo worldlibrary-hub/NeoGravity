@@ -5,6 +5,7 @@ title: "NeoGravity verification suite: Computational checks for the Theory of Ne
 abstract: "One program that recomputes twenty-seven central claims of the Theory of NeoGravity & Ether Dynamics from its five postulates and the measured inputs, printing PASS, FAIL or NOTE for each and stating where a result is calibrated rather than derived. It exits non-zero if any check fails."
 version: "4.2"
 date-released: "2026-09-17"
+doi: 10.5281/zenodo.22080221
 repository-code: "https://github.com/worldlibrary-hub/NeoGravity"
 url: "http://www.NeoGravity.org"
 license: GPL-3.0-or-later
