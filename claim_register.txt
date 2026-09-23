@@ -79,9 +79,9 @@ THE CLAIM REGISTER, NeoGravity Verification Suite v4.2
     Recomputes: kappa_L < 1.3e-4 measured; (c/c_L)^7/18 = 9.3e-3 to 0.23 derived, above it
 
 14  Withdrawn: the vorticity account of galactic rotation            WITHDRAWN     cosmos
-    Part VIII. The Negative Record
+    Part VIII. The Limits of the Postulates
     Galaxies and the Missing Mass, Paper 27
-    Section 4. The Result, and What It Does to NeoGravity
+    Section 4. The Result: Newton at Galactic Scale
     Recomputes: the vorticity account of galactic rotation, recorded as withdrawn
 
 15  A potential body force sources the compression branch only       DERIVED       waves
@@ -93,13 +93,13 @@ THE CLAIM REGISTER, NeoGravity Verification Suite v4.2
 16  Withdrawn: the relaxational source rule for kappa_L              WITHDRAWN     waves
     Part V. Dynamics
     Waves in the Ether Plenum, Paper 24
-    Section 7. Status Updates and Open Items
+    Section 7. Status Updates
     Recomputes: the relaxational source rule, recorded as withdrawn: its tau_s has no home
 
 17  The wave-sector energy is NOT the Plenum's inertia.  POSTULATE R POSTULATED    waves
     Part V. Dynamics
     Waves in the Ether Plenum, Paper 24
-    Section 7. Status Updates and Open Items
+    Section 7. Status Updates
     Recomputes: the wave-sector energy as coupling-set field energy, (c^2/16 pi G) h_dot^2
 
 18  The relaxation window's top is the Hubble time; a galaxy lies be MODEL         cosmos
@@ -129,13 +129,13 @@ THE CLAIM REGISTER, NeoGravity Verification Suite v4.2
 22  Finding A6.1: steady amplitudes are viscosity-independent        DERIVED       waves
     Part V. Dynamics
     How Spinning Masses Stir the Ether Plenum, Paper 26
-    Section 5. Finding A6.1: Rotation Cannot Measure the Viscosity
+    Section 5. Finding A6.1: The Viscosity Cancels from Steady Turning
     Recomputes: Finding A6.1: steady amplitudes are independent of the viscosity
 
 23  Finding A6.2: the barotropic law annihilates the baroclinic sour DERIVED       waves
     Part V. Dynamics
     How Spinning Masses Stir the Ether Plenum, Paper 26
-    Section 6. Finding A6.2: The Baroclinic Route Is Closed
+    Section 6. Finding A6.2: The Plenum Turns Only as Matter Turns It
     Recomputes: Finding A6.2: the barotropic law annihilates the baroclinic source
 
 24  Finding A8.1: the inflow is strictly subluminal.  NO ACOUSTIC HO DERIVED       strong
